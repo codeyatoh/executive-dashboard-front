@@ -112,6 +112,7 @@ const SalesChart = ({ filter = 'today' }) => {
 
   useEffect(() => {
     setLoading(true);
+    const now = new Date(); // Fix: define 'now' for date calculations
     Promise.all([
       client.service('orders').find(),
       client.service('order_items').find(),
