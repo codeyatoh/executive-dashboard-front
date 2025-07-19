@@ -1,0 +1,44 @@
+.categoryFilter {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+  margin-top: -1.6rem; /* Move further upward */
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filterButton {
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  border: 2px solid var(--color-primary);
+  background: var(--color-background);
+  color: var(--color-primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: none;
+}
+
+.filterButton.active, .filterButton:active {
+  background: var(--color-primary);
+  color: var(--color-background);
+  border: 2px solid var(--color-primary);
+  box-shadow: none;
+}
+
+.filterButton:hover {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+@media (max-width: 480px) {
+  .filterButton {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.2rem;
+  }
+}

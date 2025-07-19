@@ -1,0 +1,111 @@
+
+.chartContainer {
+  background: #FAFBFC;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 18px 18px 8px 18px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.chartArea {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.chartTitle {
+  color: #232323;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.2px;
+}
+
+.customLegendContainer {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 8px;
+  margin-top: 2px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #232323;
+  gap: 7px;
+}
+
+.legendBox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 4px;
+  border: 1px solid #bdbdbd;
+}
+
+.legendInactive {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.exportReportBtn {
+  background: #2D72D9;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(45,114,217,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.exportReportBtn:hover {
+  background: #1B4F9C;
+  box-shadow: 0 2px 8px rgba(45,114,217,0.13);
+}
+
+@media (max-width: 480px) {
+  .chartContainer {
+    padding: 8px 2px 4px 2px;
+    border-radius: 8px;
+  }
+  .chartArea {
+    padding: 0;
+    min-width: 0;
+    width: 100vw;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .exportReportBtn {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+  .customLegendContainer {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .chartTitle {
+    font-size: 1rem;
+  }
+  .legendItem {
+    font-size: 0.85rem;
+  }
+}

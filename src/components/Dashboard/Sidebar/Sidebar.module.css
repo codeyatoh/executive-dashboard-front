@@ -1,0 +1,117 @@
+/* Sidebar */
+.sidebar {
+  width: 100px;
+  background: #212736;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 10;
+}
+
+.logoBox {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+.logoutBox {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #fafbfc;
+  transition: color 0.2s;
+}
+
+.logoutBox:hover .logoutIcon {
+  color: #8f8d8b;
+}
+
+.logoutIcon {
+  width: 29px;
+  height: 29px;
+  color: #fafbfc;
+  transition: color 0.2s;
+  display: block;
+}
+
+.overlay {
+  display: none;
+}
+
+.overlayVisible {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(33, 39, 54, 0.45);
+  z-index: 99;
+  transition: opacity 0.3s;
+}
+
+.closeBtn {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 220px;
+    max-width: 80vw;
+    position: fixed;
+    left: -240px;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    transition: left 0.3s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 2px 0 12px rgba(0,0,0,0.08);
+  }
+  .sidebarOpen {
+    left: 0;
+  }
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+  .closeBtn {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fafbfc;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .overlay {
+    display: none;
+  }
+  .overlayVisible {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(33, 39, 54, 0.45);
+    z-index: 99;
+    transition: opacity 0.3s;
+  }
+}
+  

@@ -1,0 +1,129 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 32, 38, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(45, 114, 217, 0.10), 0 1.5px 8px rgba(30,32,38,0.08);
+  padding: 36px 32px 28px 32px;
+  min-width: 340px;
+  max-width: 95vw;
+  width: 100%;
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1.5px solid #e0e0e0;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.modalTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #232323;
+  margin: 0;
+  letter-spacing: 0.01em;
+  font-family: 'Poppins', 'Lora', Arial, sans-serif;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.closeButton:hover {
+  color: #fff;
+  background: #2D72D9;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.exportText {
+  font-size: 1.08rem;
+  color: #232323;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 2px;
+  font-family: 'Poppins', 'Lora', Arial, sans-serif;
+}
+
+.exportOptions {
+  display: flex;
+  gap: 0;
+  justify-content: flex-start;
+}
+
+.excelBtn {
+  background: #21a366;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 13px 0;
+  font-size: 1.08rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1.5px 8px rgba(33,163,102,0.13);
+  transition: background 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.01em;
+  width: 100%;
+  margin-top: 2px;
+  font-family: 'Poppins', 'Lora', Arial, sans-serif;
+}
+.excelBtn:hover {
+  background: #18804a;
+  box-shadow: 0 2px 12px rgba(33,163,102,0.18);
+}
+
+@media (max-width: 480px) {
+  .modalContent {
+    padding: 16px 4px 12px 4px;
+    min-width: unset;
+    max-width: 98vw;
+    border-radius: 10px;
+  }
+  .modalTitle {
+    font-size: 1rem;
+  }
+  .exportText, .excelBtn {
+    font-size: 0.95rem;
+  }
+  .closeButton {
+    font-size: 1.2rem;
+    width: 28px;
+    height: 28px;
+  }
+}

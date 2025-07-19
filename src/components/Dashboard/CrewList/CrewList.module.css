@@ -1,0 +1,73 @@
+.card {
+  background: #fff;
+  border: 2px solid #3d403b33;
+  border-radius: 12px;
+  padding: 20px 16px 24px 16px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3d403b;
+  margin-bottom: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 2px solid #3d403b66;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+}
+
+.id {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  color: #3d403b;
+  margin-right: 18px;
+}
+
+.name {
+  flex: 1;
+  color: #232323;
+  font-weight: 500;
+}
+
+.sales {
+  color: #3d403b;
+  font-size: 1.1rem;
+}
+
+.sales b {
+  font-weight: bold;
+  color: #232323;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.1rem;
+  }
+  .row {
+    font-size: 0.95rem;
+  }
+  .id, .sales {
+    font-size: 0.9rem;
+  }
+  .name {
+    font-size: 0.9rem;
+  }
+}
